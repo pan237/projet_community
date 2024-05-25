@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des membres</title>
+</head>
+<body>
+    <h1>Liste des membres</h1>
+    <ul>
+        {% for membre in membres %}
+            <li><a href="{% url 'detail_membre' membre.id %}">{{ membre.prenom }} {{ membre.nom }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
